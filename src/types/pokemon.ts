@@ -48,7 +48,6 @@ export interface PokedexListItem {
   name: string;
   id: number;
   sprite: string;
-  url: string;
 }
 
 export function mapPokedexListItem(data: any): PokedexListItem {
@@ -76,6 +75,5 @@ export function mapPokedexListItem(data: any): PokedexListItem {
     name: capitalizeFirstLetter(data.name),
     id: pokemonId,
     sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`,
-    url: `/pokemon/${data.name}`,
   }
 }
